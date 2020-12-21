@@ -1,0 +1,19 @@
+package Fundamentos;
+
+import javax.swing.JOptionPane;
+
+public class Converssão_C_para_F {
+
+	public static void main(String[] args) {
+		
+		final double a = 9/5.0;
+		final double f = 32;
+		double re = 0.0;
+		double c = Double.parseDouble(JOptionPane.showInputDialog(null, "Primeiro numero :"));
+		
+		re = (c*a)+32;
+		JOptionPane.showMessageDialog(null, "resultado :"+re);
+		
+	}
+
+}
