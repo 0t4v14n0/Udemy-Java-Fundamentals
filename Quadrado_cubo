@@ -1,0 +1,19 @@
+package Fundamentos;
+
+import javax.swing.JOptionPane;
+
+public class Quadrado_cubo {
+
+	public static void main(String[] args) {
+		
+		double a = 0,q = 0,c = 0;
+		
+		a = Double.parseDouble(JOptionPane.showInputDialog(null, "Valor :"));
+		
+		q=a*a;
+		c=a*a*a;
+		
+		JOptionPane.showMessageDialog(null, "Valor "+ a +" ao quadrado : "+q+" ao cubo "+c);
+	}
+
+}
