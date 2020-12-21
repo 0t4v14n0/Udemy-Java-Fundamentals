@@ -1,0 +1,28 @@
+package Fundamentos;
+
+import java.util.Scanner;
+
+public class Desafioconversao {
+
+	public static void main(String[] args) {
+		
+		String valor1="",valor2="",valor3="";
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		System.out.println("Informe o primeiro salario: ");
+		valor1 =entrada.next().replace(",", ".");
+		System.out.println("Informe o segundo salario: ");
+		valor2 =entrada.next().replace(",", ".");
+		System.out.println("Informe o terceiro salario: ");
+		valor3 =entrada.next().replace(",", ".");
+		
+		double salario1 = Double.parseDouble(valor1);
+		double salario2 = Double.parseDouble(valor1);
+		double salario3 = Double.parseDouble(valor1);
+		
+		double media = (salario1+salario2+salario3)/3;
+		System.out.println("a media é : "+media);
+	}
+
+}
