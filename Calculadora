@@ -1,0 +1,34 @@
+package Fundamentos;
+
+import javax.swing.JOptionPane;
+
+public class Calculadora {
+
+	public static void main(String[] args) {
+		double a = 0,b = 0,re = 0;
+		String carac ="";
+		
+		a = Double.parseDouble(JOptionPane.showInputDialog(null, "Primeiro numero :"));
+		b = Double.parseDouble(JOptionPane.showInputDialog(null, "Segundo numero :"));
+		carac = JOptionPane.showInputDialog(null, "Operador :");
+		
+		if ("+".equals(carac)) {
+			re = a+b;
+		}
+		else if ("*".equals(carac)){
+			re=a*b;
+		}
+		else if ("-".equals(carac)){
+			re=a-b;
+		}
+		else if ("/".equals(carac)){
+			re=a/b;
+		}
+		else {
+			re=0;
+		}
+		
+		JOptionPane.showMessageDialog(null, ""+a+" "+carac+" "+b+" = "+re);
+	}
+
+}
