@@ -1,0 +1,18 @@
+package Fundamentos;
+
+import javax.swing.JOptionPane;
+
+public class Area_tri {
+
+	public static void main(String[] args) {
+		double base = 0,altura = 0,area = 0;
+		
+		altura = Double.parseDouble(JOptionPane.showInputDialog(null, "Informe a altura :"));
+		base = Double.parseDouble(JOptionPane.showInputDialog(null, "Informe a base :"));
+
+		area = (base*altura)/2;
+		
+		JOptionPane.showMessageDialog(null, "Area = "+area);
+	}
+	
+}
