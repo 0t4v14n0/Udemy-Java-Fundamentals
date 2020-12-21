@@ -1,0 +1,18 @@
+package Fundamentos;
+
+public class Converssão_F_para_C {
+	
+	public static void main(String[] args) {
+		final double aju = 32;
+		final double cin = 5/9.0;
+		double fa = 50;
+		double res = 0.0;
+		res = (fa-aju)*cin;
+		System.out.println("Valor da area : "+res);
+		
+		fa = 50.10;
+		
+		res = (fa-aju)*cin;
+		System.out.println("Valor da area : "+res);
+	}
+}
