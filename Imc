@@ -1,0 +1,19 @@
+package Fundamentos;
+
+import javax.swing.JOptionPane;
+
+public class Imc {
+
+	public static void main(String[] args) {
+		
+		double a = 0,b = 0,imc = 0;
+		
+		a = Double.parseDouble(JOptionPane.showInputDialog(null, "Peso :"));
+		b = Double.parseDouble(JOptionPane.showInputDialog(null, "Altura :"));
+		
+		imc = a/(b*b);	
+		
+		JOptionPane.showMessageDialog(null, "Seu IMC é de : "+imc);
+	}
+
+}
