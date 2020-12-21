@@ -1,0 +1,39 @@
+package Fundamentos;
+
+import javax.swing.JOptionPane;
+
+public class Desafiooperadoreslogicos {
+
+	public static void main(String[] args) {
+		boolean trabalho1 = true;
+		boolean trabalho2 = true;
+		
+		int a = Integer.parseInt(JOptionPane.showInputDialog(null, "Trabalho 1 foi bem sucedido ?"));
+		int b = Integer.parseInt(JOptionPane.showInputDialog(null, "Trabalho 2 foi bem sucedido ?"));
+		
+		if (a == 1) {
+			trabalho1 = true;
+		}
+		else {
+			trabalho1 = false;
+		}
+		if (b == 1) {
+			trabalho2 = true;
+		}
+		else {
+			trabalho2 = false;
+		}
+		
+		boolean comproutv50 = trabalho1 && trabalho2;
+		boolean comproutv32 = trabalho1 ^ trabalho2;
+		boolean sorvete = trabalho1 || trabalho2;
+		boolean sauda = !sorvete;
+		
+		System.out.println("comprou a TV de 50 ?"+comproutv50);
+		System.out.println("comprou a TV de 32 ?"+comproutv32);
+		System.out.println("comprou sorvete ?"+sorvete);
+		System.out.println("ficou saudavel ?"+ sauda);
+		
+	}
+
+}
