@@ -1,0 +1,106 @@
+package Fundamentos;
+
+import javax.swing.JOptionPane;
+
+public class Segundo {
+
+	public static void main(String[] args) {
+		
+		int t1 = 0,t2 = 0,t3 = 0, delta = 0,apo = 0,ud;
+		float ra = 0,x1,x2,x;
+		int p1,p2,p3,so,pp1,pp2 = 0;
+		
+		do {
+			ud = Integer.parseInt(JOptionPane.showInputDialog(null,"1 - Equação do 1° grau \n"
+                    											+ "2 - Equação do 2° grau "));
+			
+			if(ud == 1) {
+				
+				do {
+					p1 = Integer.parseInt(JOptionPane.showInputDialog(null, "Valor de A"));
+					
+					if(p1 > 0 && p1 != 0) {
+						p2 = Integer.parseInt(JOptionPane.showInputDialog(null, "Valor de B"));
+						
+						JOptionPane.showMessageDialog(null, ""+p1+"x + "+p2+"=0");
+						
+						if(p2 > 0) {
+							x = -p2/p1;
+							JOptionPane.showMessageDialog(null, "Resultado :"+x);
+						}
+						else JOptionPane.showMessageDialog(null, "equação do 1º grau é classificada incompleta");
+					}
+					else JOptionPane.showMessageDialog(null, "equação do 1º grau é classificada incompleta");
+					
+				}while(t3 != 0);
+				
+				
+			}
+			else if (ud == 2) {
+				do {
+					p1 = Integer.parseInt(JOptionPane.showInputDialog(null, "Valor de A"));
+					
+					if (p1 != 0) {
+						p2 = Integer.parseInt(JOptionPane.showInputDialog(null, "Valor de B"));
+						
+						if(p2 != 0) {
+							p3 = Integer.parseInt(JOptionPane.showInputDialog(null, "Valor de C"));
+							
+							if(p3 != 0){
+								JOptionPane.showMessageDialog(null,""+p1+"x²"+p2+"x"+p3+"=0");
+								
+								if(p2 < 0)pp2=p2*-1;
+								
+								pp1 = p1;
+								pp2 = pp2*pp2;
+								apo = -4*pp1*p3;
+								
+								if(p1 < 0 && p3 < 0) {
+									delta = pp1 - apo;
+								}
+								else{
+									delta = pp1 + apo + 1;
+								}
+								
+								JOptionPane.showMessageDialog(null, "Valor de delta : "+delta);
+								
+								ra=(float) Math.sqrt(delta);
+								
+								so = 2*p1;
+								
+								if(p2 < 0) {
+									x1 = (-p2 + ra) / so;
+									x2 = (-p2 - ra) / so;
+								}
+								else {
+									x1 = (-p2 + ra) / so;
+									x2 = (-p2 - ra) / so;
+								}
+								
+								JOptionPane.showMessageDialog(null, "Valor de X1 :"+x1+" x2 :"+ x2);
+
+							}
+							else {
+								JOptionPane.showMessageDialog(null, "equação do 2º grau é classificada incompleta");
+								t1=1;
+							}
+						}
+						else {
+							JOptionPane.showMessageDialog(null, "equação do 2º grau é classificada incompleta");
+							t1=1;
+						}
+					}
+					else {
+						JOptionPane.showMessageDialog(null, "equação do 2º grau é classificada incompleta");
+						t1=1;
+					}
+					
+				}while(t1 != 0);
+			}
+			else t2 = 1;
+			t2 = 1;
+		}while(t2 != 0);
+		
+	}
+
+}
