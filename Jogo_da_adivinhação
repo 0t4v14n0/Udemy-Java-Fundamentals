@@ -1,0 +1,45 @@
+package Fundamentos;
+
+import javax.swing.JOptionPane;
+
+import java.util.Random;
+
+public class Jogo_da_adivinhação {
+
+	public static void main(String[] args) {
+		
+		Random gerador = new Random();
+		int pa = 0,erro = 0;
+		
+		int[] a = new int[10];
+		
+		pa=gerador.nextInt(100);
+		
+		for(int cont = 0;cont >= 10;cont++) {
+			do {
+				a[cont] = Integer.parseInt(JOptionPane.showInputDialog(null,""+ cont+1 +"° Palpite"));
+				if(a[cont]>=0 && a[cont]<=100) {
+					erro = 0;
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "");
+					erro = 1;
+				} 
+			}while(erro != 0);
+			
+			if(a[cont]>pa) {
+				JOptionPane.showMessageDialog(null, "Valor muito alto");
+			}
+			else if (a[cont]<pa) {
+				JOptionPane.showMessageDialog(null, "Valor muito baixo"+ pa +".");
+			}
+			else if (a[cont]==pa) {
+				JOptionPane.showMessageDialog(null, "Parabens voce acertou"+ pa +".");
+				cont = 10;
+			}
+			
+		}
+		
+	}
+
+}
